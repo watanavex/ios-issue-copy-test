@@ -149,7 +149,7 @@ jobs:
     - name: Create a issue
       if: ${{ matrix.issue.pull_request == null }}
       run: |
-        body=$(echo "${{ matrix.issue.body }}")
+        body=$(echo '${{ matrix.issue.body }}')
         body="${body//$'\n'/\\n}"
         body="${body//$'\r'/\\r}"
         
